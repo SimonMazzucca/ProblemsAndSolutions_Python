@@ -1,8 +1,20 @@
-UUU
-UUU_Tests
-test_UUU_01
-
+# Create class file
 LLL
+
+class UUU:
+    pass
+
+# create test file
 test_LLL
 
+import unittest
 from leetcode.problems.LLL import UUU
+
+
+class UUU_Tests(unittest.TestCase):
+
+    def test_UUU_01(self):
+        lc = UUU()
+
+        actual = lc.METHOD_NAME(INPUT)
+        self.assertEqual(EXPECTED, actual)
