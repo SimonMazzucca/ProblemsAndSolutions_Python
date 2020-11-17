@@ -1,11 +1,11 @@
 # Create class file
-LLL
+LLL.py
 
 class UUU:
     pass
 
 # create test file
-test_LLL
+test_LLL.py
 
 import unittest
 from leetcode.problems.LLL import UUU
@@ -17,4 +17,6 @@ class UUU_Tests(unittest.TestCase):
         lc = UUU()
 
         actual = lc.METHOD_NAME(INPUT)
-        self.assertEqual(EXPECTED, actual)
+        expected = []
+
+        self.assertEqual(expected, actual)
