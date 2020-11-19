@@ -1,22 +1,85 @@
-# Create class file
-LLL.py
+Strings
+s.isalpha(), s.isalnum(), s.isdigit(), s.isspace()
+s.upper(), s.lower()
+s.strip()
+s.find(‘other’) # return -1 if not found, or index
+s.replace(‘old’, ‘new’)
+s.split(‘,’)
+“/”.join([“a”,”b”,”c”]) # a/b/c
 
-class UUU:
-    pass
+Numbers
+a.zfill(10)   # add zeros
 
-# create test file
-test_LLL.py
+Slices
+s_copy = s[:]    # way of copying a string
 
-import unittest
-from leetcode.problems.LLL import UUU
+Custom sort
+list.sort()
+
+sorted( list, key=sort_function, reverse=True)
+def sort_function(key):	# transform the key
+	return key
+
+sorted(list, key=str.lower) # lower case
+
+key=itemgetter(0)
+
+List comprehensions
+squares = [ n * n for n in nums ]
+
+List
+l.append(‘x’)q
+l.insert(0, ‘y’)
+list.remove(‘x’)
+del list[0]
+list.pop()
+list.pop(0)
+
+a = b[:] # Copy list
+
+Permutations
+list(itertools.permutations([1,2,3],3))
+
+Dict
+d.keys()
+d.values()
+
+del d[‘a’]
+
+sorted(d.items()) # sort by key
+sorted(d.items(), key=lambda x: x[1]) # sort by value
+
+Reg exp
+Match = re.search(r’\d’, string)
+
+base 64
+import base64
+encoded = base64.b64encode(“…”)
+data = base64.b64decode(encoded)
+
+key hash table
+Import hashlib
+
+string = key.encode()
+hashed_key = hashlib.sha256(string)
+hex_digest = hashed_key.hexdigest()
+digest = int(hex_digest, 16)
 
 
-class UUU_Tests(unittest.TestCase):
 
-    def test_UUU_01(self):
-        lc = UUU()
+Python Coding notes
 
-        actual = lc.METHOD_NAME(INPUT)
-        expected = []
+Alphanumeric checks
+string.isalpha()
+string.isnumeric()
+string.isalnum()
 
-        self.assertEqual(expected, actual)
+Sort sublist
+def sublist_sort(sub_li):
+    sub_li.sort(key = lambda x: x[0], reverse=None)
+    return sub_li
+
+Sort
+array.sort()
+array.sort(reverse=True)
+sorted_array = sorted(array)

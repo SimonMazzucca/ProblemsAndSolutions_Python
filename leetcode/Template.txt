@@ -1,0 +1,22 @@
+# Create class file
+LLL.py
+
+class UUU:
+    pass
+
+# create test file
+test_LLL.py
+
+import unittest
+from leetcode.problems.LLL import UUU
+
+
+class UUU_Tests(unittest.TestCase):
+
+    def test_UUU_01(self):
+        lc = UUU()
+
+        actual = lc.METHOD_NAME(INPUT)
+        expected = []
+
+        self.assertEqual(expected, actual)
