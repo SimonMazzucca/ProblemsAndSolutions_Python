@@ -3,16 +3,13 @@ from leetcode.common.listnode import ListNode
 
 class LC0083_Remove_Duplicates_from_Sorted_List:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
-
         curr = head
-        prev = None
 
-        while curr is not None:
+        while curr is not None and curr.next is not None:
 
-            if prev is not None and curr.val == prev.val:
-                prev.next = curr.next
-
-            prev = curr
-            curr = curr.next
+            if curr.next.val == curr.val:
+                curr.next = curr.next.next
+            else:
+                curr = curr.next
 
         return head
