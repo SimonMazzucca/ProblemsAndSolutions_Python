@@ -15,3 +15,17 @@ class ListNode:
             n = n.next
 
         return res
+
+    @staticmethod
+    def create(lst=[]):
+        if lst is None or lst == []:
+            return None
+
+        head = ListNode(lst[0])
+        curr = head
+
+        for i in range(1, len(lst)):
+            curr.next = ListNode(lst[i])
+            curr = curr.next
+
+        return head
