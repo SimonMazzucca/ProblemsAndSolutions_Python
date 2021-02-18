@@ -1,5 +1,5 @@
 import unittest
-from leetcode.problems.Lc0509_fibonacci_number import LC0509_Fibonacci_Number
+from leetcode.problems.lc0509_fibonacci_number import LC0509_Fibonacci_Number
 
 
 class LC0509_Fibonacci_Number_Tests(unittest.TestCase):

@@ -11,7 +11,7 @@ class TreeNode:
         if nodes[0] is None or nodes[0] == '':
             return None
 
-        root = TreeNode(nodes[0])
+        root = TreeNode(int(nodes[0]))
         current = root
         queue = []
         left = True
@@ -23,10 +23,10 @@ class TreeNode:
             if nodes[i] != 'null':
 
                 if left:
-                    current.left = TreeNode(nodes[i])
+                    current.left = TreeNode(int(nodes[i]))
                     queue.append(current.left)
                 else:
-                    current.right = TreeNode(nodes[i])
+                    current.right = TreeNode(int(nodes[i]))
                     queue.append(current.right)
 
             left = not left
